@@ -1,9 +1,10 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "imweb ESLint configs for Javascript",
   "main": "index.js",
   "files": [
+    "eslintrc.json",
     "index.js",
     "prettier.js",
     "typescript.js"

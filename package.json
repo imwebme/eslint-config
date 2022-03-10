@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "imweb ESLint configs for Javascript",
   "main": "index.js",
   "files": [
@@ -36,11 +36,13 @@
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.29.3",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.29.3"
   }
 }

@@ -1,6 +1,9 @@
 # @imwebme/eslint-config
 
-A rule set of imwebme's ESLint configurations based on Airbnb's.
+A rule set of imwebme's ESLint configurations
+
+- eslint:recommended [List of available rules - ESLint - Pluggable JavaScript linter](https://eslint.org/docs/rules/)
+- @typescript-eslint/recommended [typescript-eslint/packages/eslint-plugin at main · typescript-eslint/typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/eslint-plugin)
 
 ## Installation
 
@@ -18,27 +21,7 @@ Github repo 설정하기
 @imwebme:registry=https://npm.pkg.github.com/
 ```
 
-Install `@imwebme/eslint-config` package:
-
-1. Install the correct versions of each package, which are listed by the command:
-
-```
-npm info "@imwebme/eslint-config" peerDependencies
-```
-
-if using **npm 5+**, use this shortcut
-
-```
-npx install-peerdeps --dev @imwebme/eslint-config
-```
-
-if using **yarn**, use this command
-
-```
-yarn add --peer --dev @imwebme/eslint-config
-```
-
-2. Install via package manager:
+### 패키지 관리자를 통해 설치
 
 ```
 npm install --save-dev @imwebme/eslint-config
@@ -54,10 +37,20 @@ yarn --dev @imwebme/eslint-config
 
 ### Javascript
 
-```javascript
+`.eslintrc.js`
+```js
 module.exports = {
   extends: [
     '@imwebme/eslint-config'
+  ]
+}
+```
+
+`.eslintrc`
+```
+{
+  "extends": [
+    "@imwebme/eslint-config"
   ]
 }
 ```
@@ -69,7 +62,8 @@ module.exports = {
 
 #### Typescript
 
-```javascript
+`.eslintrc.js`
+```js
 module.exports = {
   extends: [
     '@imwebme/eslint-config',
@@ -77,12 +71,24 @@ module.exports = {
   ]
 }
 ```
+
+`.eslintrc`
+```
+{
+  "extends": [
+    "@imwebme/eslint-config",
+    "@imwebme/eslint-config/typescript"
+  ]
+}
+```
+
 ### @imwebme/eslint-config/react
 
 > * eslint-plugin-react
 
 #### Javascript + React
 
+`.eslintrc.js`
 ```js
 {
   "extends": [
@@ -92,14 +98,36 @@ module.exports = {
 }
 ```
 
+`.eslintrc`
+```
+{
+  "extends": [
+    "@imwebme/eslint-config",
+    "@imwebme/eslint-config/react"
+  ]
+}
+```
+
 #### Typescript + React
 
-```javascript
+`.eslintrc.js`
+```js
 module.exports = {
   extends: [
     '@imwebme/eslint-config',
     '@imwebme/eslint-config/typescript',
     '@imwebme/eslint-config/react'
+  ]
+}
+```
+
+`.eslintrc`
+```
+{
+  "extends": [
+    "@imwebme/eslint-config",
+    "@imwebme/eslint-config/typescript",
+    "@imwebme/eslint-config/react"
   ]
 }
 ```
@@ -110,7 +138,7 @@ module.exports = {
 
 #### Prettier
 
-works fine with local configuration file (e.g. .prettierrc)
+`.prettierrc`
 ```js
 {
   "extends": [

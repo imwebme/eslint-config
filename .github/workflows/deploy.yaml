@@ -1,10 +1,5 @@
 name: Publish Package to Github
 on:
-  push:
-    paths:
-      - "*.js"
-      - "eslintrc.jso "
-      - "package.json"
   release:
     types: [created]
 jobs:

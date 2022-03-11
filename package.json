@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "imweb ESLint configs for Javascript",
   "main": "index.js",
   "files": [
@@ -44,7 +44,7 @@
     "typescript": "^4.6.2"
   },
   "peerDependencies": {
-    "eslint": "^7.23.0 || ^8.0.0",
+    "eslint": "^7.23.0 || ^8.10.0",
     "typescript": "^4.6.2"
   },
   "peerDependenciesMeta": {

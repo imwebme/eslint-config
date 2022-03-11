@@ -19,7 +19,7 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "" # If blank, default: triggered branch
-          destination_branch: "develop" # If blank, default: master
+          destination_branch: "main" # If blank, default: master
           pr_title: "${{ steps.extract_branch.outputs.branch }}" # Title of pull request
           pr_body: "Resolves: #${{steps.extract_branch.outputs.id}}\n\n:crown: *An automated PR*" # Full markdown support, requires pr_title to be set
           pr_draft: true # Creates pull request as draft

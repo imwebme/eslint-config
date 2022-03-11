@@ -12,7 +12,7 @@ jobs:
         shell: bash
         run: |
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=id;]$(echo ${GITHUB_REF#refs/heads/eslint-config/IMFE})"
+          echo "##[set-output name=id;]$(echo ${GITHUB_REF#refs/heads/eslint-config/IMFE-})"
         id: extract_branch
       - uses: actions/checkout@v2
       - name: Create Pull Request

@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "imweb ESLint configs for Javascript",
   "main": "index.js",
   "files": [

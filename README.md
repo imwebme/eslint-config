@@ -1,3 +1,5 @@
+[![Publish Package to Github](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml/badge.svg)](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml)
+
 # @imwebme/eslint-config
 
 A rule set of imwebme's ESLint configurations

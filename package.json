@@ -1,22 +1,25 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "imweb ESLint configs for Javascript",
-  "main": "index.js",
-  "files": [
-    "eslintrc.json",
-    "index.js",
-    "react.js",
-    "prettier.js",
-    "typescript.js"
-  ],
+  "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint . --config=eslintrc.json",
-    "test": "npm run lint && tape test/*.js"
+    "test": "npm run lint && tape test/*.js",
+    "build": "nanobundle build",
+    "build:recommended": "nanobundle build --root-dir ./src/recommended --out-dir ./recommended",
+    "build:typescript": "nanobundle build --root-dir . --out-dir ./typescript --config ./src/typescript.js",
+    "build:react": "nanobundle build --root-dir . --out-dir ./react --config ./src/react.js",
+    "build:prettier": "nanobundle build --root-dir . --out-dir ./prettier --config ./src/prettier.js",
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imwebme/eslint-config.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
   },
   "keywords": [
     "eslint",
@@ -51,5 +54,43 @@
     "typescript": {
       "optional": true
     }
-  }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "nanobundle": "^1.5.0"
+  },
+  "exports": {
+    ".": {
+      "source": "./lib/index.js",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.mjs"
+    },
+    "./recommended": {
+      "source": "./lib/recommended.js",
+      "require": "./lib/recommended.cjs",
+      "import": "./lib/recommended.mjs"
+    },
+    "./typescript": {
+      "source": "./lib/typescript.js",
+      "require": "./lib/typescript.cjs",
+      "import": "./lib/typescript.mjs"
+    },
+    "./react": {
+      "source": "./lib/react.js",
+      "require": "./lib/react.cjs",
+      "import": "./lib/react.mjs"
+    },
+    "./prettier": {
+      "source": "./lib/prettier.js",
+      "require": "./lib/prettier.cjs",
+      "import": "./lib/prettier.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "typescript",
+    "react",
+    "prettier"
+  ]
 }

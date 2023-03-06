@@ -7,11 +7,9 @@
     "lint": "eslint . --config=eslintrc.json",
     "test": "npm run lint && tape test/*.js",
     "build": "nanobundle build",
-    "build:recommended": "nanobundle build --root-dir ./src/recommended --out-dir ./recommended",
-    "build:typescript": "nanobundle build --root-dir . --out-dir ./typescript --config ./src/typescript.js",
-    "build:react": "nanobundle build --root-dir . --out-dir ./react --config ./src/react.js",
-    "build:prettier": "nanobundle build --root-dir . --out-dir ./prettier --config ./src/prettier.js",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "bump": "node ./scripts/bump.js",
+    "release": "node ./scripts/release.js"
   },
   "repository": {
     "type": "git",
@@ -56,6 +54,7 @@
     }
   },
   "devDependencies": {
+    "@actions/exec": "^1.1.1",
     "@changesets/cli": "^2.26.0",
     "nanobundle": "^1.5.0"
   },

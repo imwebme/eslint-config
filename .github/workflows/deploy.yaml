@@ -10,6 +10,8 @@ on:
     branches:
       - main
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   npm-release:
     name: Release (npm)
@@ -53,19 +55,20 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: yarn release
+          publish: changeset publish
+          commit: "ci(changesets): version packages"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       # 배포에 실패한 경우 후속 처리
       - name: Publishing fail
-        if: steps.changesets.outputs.published != 'true'
+        if: steps.publish.outputs.published != 'true'
         run: ...
 
       # 배포가 성공한 경우 후속 처리
       - name: Publishing success!
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.publish.outputs.published == 'true'
         run: ... # 메일, 슬랙 메시지 전송 등... 필요 기능 추가
 
   # github package에 배포하는 것은 메인 배포가 아니기 때문에 npm 배포가 정상적으로 완료된다면 github package에 배포한다.

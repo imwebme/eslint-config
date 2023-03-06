@@ -7,17 +7,11 @@
     "lint": "eslint . --config=eslintrc.json",
     "test": "npm run lint && tape test/*.js",
     "build": "nanobundle build",
-    "prepublishOnly": "yarn build",
-    "bump": "node ./scripts/bump.js",
-    "release": "node ./scripts/release.js"
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imwebme/eslint-config.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
-    "access": "public"
   },
   "keywords": [
     "eslint",

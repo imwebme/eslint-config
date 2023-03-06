@@ -37,6 +37,7 @@ jobs:
       - name: Configure npm
         run: |
           cat << EOF > "$HOME/.npmrc"
+            @imwebme:registry=https://registry.npmjs.org/
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
         env:

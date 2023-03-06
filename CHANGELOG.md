@@ -1,5 +1,11 @@
 # @imwebme/eslint-config
 
+## 1.1.3
+
+### Patch Changes
+
+- a832d2b: npm 2FA 제거후 ci/cd test (3)
+
 ## 1.1.2
 
 ### Patch Changes

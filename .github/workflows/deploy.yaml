@@ -68,8 +68,10 @@ jobs:
         if: steps.changesets.outputs.published == 'true'
         run: ... # 메일, 슬랙 메시지 전송 등... 필요 기능 추가
 
+  # github package에 배포하는 것은 메인 배포가 아니기 때문에 npm 배포가 정상적으로 완료된다면 github package에 배포한다.
   gh-release:
     name: Release (github package)
+    needs: [npm-release]
     runs-on: ubuntu-latest
     steps:
       # 레포지토리에 체크아웃하여 소스를 가져온다.
@@ -104,24 +106,16 @@ jobs:
       - name: Build packages
         run: yarn build
 
-      # Changesets에서 제공하는 Action을 사용할 수 있다.
-      # NPM에 배포, Git 태그 생성 등의 작업을 수행한다.
-      - name: Create release Pull Request or publish to NPM
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: changeset publish
-          commit: "ci(changesets): version packages"
-        env:
-          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Deploy packages
+        id: github_deploy
+        run: yarn publish
 
       # 배포에 실패한 경우 후속 처리
       - name: Publishing fail
-        if: steps.changesets.outputs.published != 'true'
+        if: steps.github_deploy.outputs.published != 'true'
         run: ...
 
       # 배포가 성공한 경우 후속 처리
       - name: Publishing success!
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.github_deploy.outputs.published == 'true'
         run: ... # 메일, 슬랙 메시지 전송 등... 필요 기능 추가

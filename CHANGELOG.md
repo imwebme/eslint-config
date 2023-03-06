@@ -1,5 +1,11 @@
 # @imwebme/eslint-config
 
+## 1.1.1
+
+### Patch Changes
+
+- f0b91c5: changeset ci/cd 테스트
+
 ## 1.1.0
 
 ### Minor Changes

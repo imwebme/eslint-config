@@ -9,22 +9,6 @@ A rule set of imwebme's ESLint configurations
 
 ## Installation
 
-Github repo 설정하기
-
-`~/.npmrc`
-
-```
-//npm.pkg.github.com/:_authToken=
-```
-
-`project_root/.npmrc`
-
-```
-@imwebme:registry=https://npm.pkg.github.com/
-```
-
-### 패키지 관리자를 통해 설치
-
 ```
 npm install --save-dev @imwebme/eslint-config
 ```

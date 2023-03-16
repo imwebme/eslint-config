@@ -1,4 +1,4 @@
-[![Publish Package to Github](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml/badge.svg)](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml)
+[![Publish Package to Github](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml/badge.svg)](https://github.com/imwebme/eslint-config/actions/workflows/deploy.yaml) [![Publish Package to NPM](https://badgen.net/npm/v/@imwebme/eslint-config)](https://www.npmjs.com/package/@imwebme/eslint-config)
 
 # @imwebme/eslint-config
 

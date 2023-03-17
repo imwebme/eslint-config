@@ -11,10 +11,14 @@ module.exports = {
     },
   },
   rules: {
-    'react/jsx-filename-extension': ['error', {
-      extensions: ['.jsx', '.tsx'],
-    }],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.jsx', '.tsx'],
+      }
+    ],
     'react/prop-types': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     react: {

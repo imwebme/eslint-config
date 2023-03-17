@@ -19,6 +19,7 @@ module.exports = {
       singleQuote: true,
       semi: false,
     }],
-    "import/prefer-default-export": 'off'
+    "import/prefer-default-export": 'off',
+    "import/no-extraneous-dependencies": 'off',
   }
 };

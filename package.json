@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "description": "imweb ESLint configs for Javascript",
   "main": "./lib/index.js",
   "scripts": {
@@ -50,6 +50,7 @@
   "devDependencies": {
     "@actions/exec": "^1.1.1",
     "@changesets/cli": "^2.26.0",
+    "eslint-config-airbnb": "^19.0.4",
     "nanobundle": "^1.5.0"
   },
   "exports": {
@@ -78,6 +79,11 @@
       "require": "./lib/prettier.cjs",
       "import": "./lib/prettier.mjs"
     },
+    "./zynk-react": {
+      "source": "./lib/zynk-react.js",
+      "require": "./lib/zynk-react.cjs",
+      "import": "./lib/zynk-react.mjs"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -85,5 +91,8 @@
     "typescript",
     "react",
     "prettier"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }

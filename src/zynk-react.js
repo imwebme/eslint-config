@@ -20,6 +20,7 @@ module.exports = {
       semi: false,
     }],
     "import/prefer-default-export": 'off',
+    // 모든코드가 build에 번들되기 때문에 모두 dev디펜던시로 설정
     "import/no-extraneous-dependencies": 'off',
   }
 };

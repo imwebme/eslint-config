@@ -133,18 +133,3 @@ module.exports = {
   ],
 }
 ```
-
-## bundle
-
-## config 개선
-
-정규식과 관련된 모든 것과 같이 복잡한 규칙을 변경하는 경우 테스트 사례를 추가하는 것을 고려하십시오. 아마도 먼 미래에 프로그래밍을 사용하여 `.eslintrc`에 대한 테스트 케이스로 README를 구조화할 수 있을 것입니다.
-
-`npm test`로 테스트를 실행할 수 있습니다
-
-## zynk-react
-
-`airbnb`룰베이스
-
-- `react/jsx-props-no-spreading` 라이브러를 만들다보니 props를 전체 spreading 할일이 많아서 error에서 제거
-- 

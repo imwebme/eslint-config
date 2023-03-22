@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.1.36",
+  "version": "1.2.1",
   "description": "imweb ESLint configs for Javascript",
   "main": "./lib/index.js",
   "scripts": {
@@ -29,7 +29,6 @@
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "eslint": "^8.10.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^7.1.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.25.4",
@@ -71,11 +70,6 @@
       "source": "./lib/prettier.js",
       "require": "./lib/prettier.cjs",
       "import": "./lib/prettier.mjs"
-    },
-    "./zynk-react": {
-      "source": "./lib/zynk-react.js",
-      "require": "./lib/zynk-react.cjs",
-      "import": "./lib/zynk-react.mjs"
     },
     "./package.json": "./package.json"
   },

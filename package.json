@@ -1,6 +1,6 @@
 {
   "name": "@imwebme/eslint-config",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "imweb ESLint configs for Javascript",
   "main": "./lib/index.js",
   "scripts": {
@@ -32,7 +32,6 @@
     "eslint-config-prettier": "^7.1.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0"
